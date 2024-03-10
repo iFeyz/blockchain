@@ -18,7 +18,3 @@ func TestGeneratePrivateKey(t *testing.T) {
 	fmt.Println(sig)
 	fmt.Println(sig.Verify(pubKey, msg))
 }
-
-func TestKeypair_Sign_Verify(t *testing.T) {
-
-}

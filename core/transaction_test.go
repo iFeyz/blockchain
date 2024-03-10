@@ -32,3 +32,10 @@ func TestVerifyTransaction(t *testing.T) {
 
 	assert.NotNil(t, tx.Verify())
 }
+
+func TestSignBlock(t *testing.T) {
+	privKey := crypto.GeneratePrivateKey()
+	b := randomBlock(0)
+	assert.Nil(t, b.Sign(privKey))
+	assert.NotNil(t, b.Signature)
+}
